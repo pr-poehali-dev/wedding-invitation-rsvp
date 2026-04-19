@@ -91,43 +91,7 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
   );
 }
 
-function Countdown() {
-  const target = new Date("2025-07-19T15:00:00");
-  const [diff, setDiff] = useState({ d: 0, h: 0, m: 0, s: 0 });
-  useEffect(() => {
-    const tick = () => {
-      const now = new Date();
-      const total = Math.max(0, target.getTime() - now.getTime());
-      setDiff({
-        d: Math.floor(total / 86400000),
-        h: Math.floor((total % 86400000) / 3600000),
-        m: Math.floor((total % 3600000) / 60000),
-        s: Math.floor((total % 60000) / 1000),
-      });
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
-  const items = [
-    { v: diff.d, l: "дней" },
-    { v: diff.h, l: "часов" },
-    { v: diff.m, l: "минут" },
-    { v: diff.s, l: "секунд" },
-  ];
-  return (
-    <div className="flex gap-4 justify-center flex-wrap bg-transparent">
-      {items.map(({ v, l }) => (
-        <div key={l} className="text-center">
-          <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-1">
-            <span className="font-display text-3xl font-bold text-white">{String(v).padStart(2, "0")}</span>
-          </div>
-          <span className="text-white/60 text-xs font-body uppercase tracking-widest">{l}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
+
 
 export default function Index() {
   const [activeNav, setActiveNav] = useState("hero");
@@ -216,11 +180,7 @@ export default function Index() {
 
           <p className="font-display text-2xl md:text-3xl italic mb-10 animate-fade-up text-[#ffffff]" style={{ animationDelay: "0.2s" }}>12 июня 2026 года</p>
 
-          <div className="mb-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Countdown />
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <button
               onClick={() => scrollTo("rsvp")}
               className="px-8 py-4 rounded-full bg-gradient-to-r from-[#C2185B] to-[#D4A843] text-white font-semibold text-sm tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-pulse-glow"
