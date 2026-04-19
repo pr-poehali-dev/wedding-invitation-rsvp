@@ -148,12 +148,7 @@ export default function Index() {
             >
               Подтвердить участие
             </button>
-            <button
-              onClick={() => scrollTo("couple")}
-              className="px-8 py-4 rounded-full border border-white/30 text-white font-semibold text-sm tracking-wide hover:bg-white/10 transition-all duration-300"
-            >
-              Наша история
-            </button>
+
           </div>
         </div>
 
