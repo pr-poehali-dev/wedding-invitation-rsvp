@@ -117,8 +117,11 @@ export default function Index() {
             Екатерина
           </h1>
 
-          <p className="font-display text-2xl md:text-3xl text-white/70 italic mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <p className="font-display text-2xl md:text-3xl text-white/70 italic mb-2 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             12 июня 2026 года
+          </p>
+          <p className="font-display text-xl md:text-2xl text-[#D4A843]/90 italic mb-10 animate-fade-up" style={{ animationDelay: "0.25s" }}>
+            Начало в 11:20
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
@@ -155,7 +158,7 @@ export default function Index() {
             {[
               { icon: "MapPin", title: "Адрес", value: "г. Ижевск, ул. Орджоникидзе, 33А" },
               { icon: "Calendar", title: "Дата", value: "12 июня 2026, пятница" },
-              { icon: "Clock", title: "Начало", value: "11:20 — сбор гостей" },
+              { icon: "Clock", title: "Начало", value: "11:00 — сбор гостей" },
             ].map(({ icon, title, value }) => (
               <AnimatedSection key={title}>
                 <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#C2185B]/40 transition-all duration-300">
