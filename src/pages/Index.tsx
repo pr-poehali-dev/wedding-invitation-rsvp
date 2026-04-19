@@ -116,7 +116,7 @@ function Countdown() {
     { v: diff.s, l: "секунд" },
   ];
   return (
-    <div className="flex gap-4 justify-center flex-wrap">
+    <div className="flex gap-4 justify-center flex-wrap bg-transparent">
       {items.map(({ v, l }) => (
         <div key={l} className="text-center">
           <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-1">
@@ -214,9 +214,7 @@ export default function Index() {
 &
 Екатерина</h1>
 
-          <p className="font-display text-2xl md:text-3xl text-white/70 italic mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            19 июля 2025 года
-          </p>
+          <p className="font-display text-2xl md:text-3xl italic mb-10 animate-fade-up text-[#ffffff]" style={{ animationDelay: "0.2s" }}>12 июня 2026 года</p>
 
           <div className="mb-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <Countdown />
