@@ -1,54 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
-const COUPLE_IMAGE = "https://cdn.poehali.dev/projects/57646507-e76f-4882-8bdf-de9a92051998/files/7201cf36-73e7-4db1-b6d9-4d52a8372fff.jpg";
-
 const NAV_LINKS = [
   { id: "hero", label: "Главная" },
-  { id: "couple", label: "Пара" },
   { id: "venue", label: "Место" },
   { id: "schedule", label: "Программа" },
   { id: "gallery", label: "Галерея" },
   { id: "rsvp", label: "Подтверждение" },
 ];
 
-const STORY = [
-  {
-    year: "2019",
-    month: "Февраль",
-    title: "Первая встреча",
-    text: "Случайное знакомство на вечеринке друзей. Один взгляд — и всё стало ясно. Мы проговорили всю ночь напролёт.",
-    emoji: "✨",
-  },
-  {
-    year: "2019",
-    month: "Лето",
-    title: "Первое путешествие",
-    text: "Неделя в Тбилиси. Старые улочки, вино и бесконечные разговоры. Именно здесь мы поняли, что хотим быть вместе.",
-    emoji: "🌍",
-  },
-  {
-    year: "2021",
-    month: "Январь",
-    title: "Переезд вместе",
-    text: "Решились на большой шаг — съехались. Новая квартира, первый совместный завтрак и понимание: это навсегда.",
-    emoji: "🏠",
-  },
-  {
-    year: "2023",
-    month: "Декабрь",
-    title: "Предложение",
-    text: "На заснеженной смотровой площадке, под звёздным небом. Она сказала «да» раньше, чем он успел договорить.",
-    emoji: "💍",
-  },
-  {
-    year: "2025",
-    month: "Июль",
-    title: "Свадьба",
-    text: "И вот — наш день. Мы рады разделить его с теми, кто был рядом на этом пути.",
-    emoji: "💒",
-  },
-];
+
 
 const SCHEDULE = [
   { time: "15:00", title: "Сбор гостей", desc: "Встреча на территории усадьбы, welcome-напитки", icon: "Users" },
@@ -201,85 +162,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* COUPLE */}
-      <section id="couple" className="py-28 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <AnimatedSection className="text-center mb-20">
-            <span className="text-[#C2185B] text-sm font-medium tracking-[0.3em] uppercase">Наша история</span>
-            <h2 className="font-display text-5xl md:text-7xl font-bold text-gray-900 mt-3">
-              Путь к <span className="text-gradient">"Да"</span>
-            </h2>
-          </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
-            <AnimatedSection>
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-[#C2185B]/20 to-[#D4A843]/20 blur-xl" />
-                <img
-                  src={COUPLE_IMAGE}
-                  alt="Артём и Екатерина"
-                  className="relative rounded-3xl w-full object-cover aspect-[4/5] shadow-2xl"
-                />
-                <div className="absolute -bottom-6 -right-6 w-28 h-28 rounded-2xl bg-gradient-to-br from-[#C2185B] to-[#D4A843] flex items-center justify-center shadow-xl">
-                  <div className="text-center">
-                    <div className="font-display text-white text-3xl font-bold">6</div>
-                    <div className="text-white/80 text-xs">лет вместе</div>
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection>
-              <div className="space-y-8">
-                <div className="p-6 rounded-2xl bg-rose-50 border border-rose-100">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C2185B] to-[#D4A843] flex items-center justify-center text-white font-display font-bold">А</div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Артём</div>
-                      <div className="text-sm text-gray-500">Жених</div>
-                    </div>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed font-display italic text-lg">
-                    «Я встретил её и понял — это тот человек, с которым хочу просыпаться каждое утро и засыпать каждую ночь»
-                  </p>
-                </div>
-                <div className="p-6 rounded-2xl bg-amber-50 border border-amber-100">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#D4A843] to-[#C2185B] flex items-center justify-center text-white font-display font-bold">Е</div>
-                    <div>
-                      <div className="font-semibold text-gray-900">Екатерина</div>
-                      <div className="text-sm text-gray-500">Невеста</div>
-                    </div>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed font-display italic text-lg">
-                    «Он — моё приключение, мой покой и моё будущее. С ним я дома везде, где бы мы ни находились»
-                  </p>
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
-
-          {/* Timeline */}
-          <div className="relative py-8">
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-[#C2185B] to-transparent -translate-x-0.5 hidden md:block" />
-            {STORY.map((item, i) => (
-              <AnimatedSection key={i} className={`flex items-center gap-8 mb-16 ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
-                <div className={`flex-1 ${i % 2 === 1 ? "md:text-right" : ""}`}>
-                  <div className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-2 bg-gradient-to-r from-[#C2185B]/10 to-[#D4A843]/10 text-[#C2185B] border border-[#C2185B]/20">
-                    {item.month} {item.year}
-                  </div>
-                  <h3 className="font-display text-2xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed max-w-sm">{item.text}</p>
-                </div>
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-[#C2185B] to-[#D4A843] flex items-center justify-center text-2xl shadow-lg z-10">
-                  {item.emoji}
-                </div>
-                <div className="flex-1 hidden md:block" />
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* VENUE */}
       <section id="venue" className="py-28 px-6 bg-gray-950 relative overflow-hidden">
