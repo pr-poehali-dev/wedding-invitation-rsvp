@@ -210,7 +210,7 @@ export default function Index() {
             <span className="text-[#D4A843] text-sm">✦</span>
           </div>
 
-          <h1 className="font-display text-7xl md:text-9xl font-bold animate-fade-up leading-none tracking-tight text-gray-50 my-2 mx-0 px-0 py-[143px]">Артем
+          <h1 className="font-display text-7xl md:text-9xl font-bold animate-fade-up leading-none tracking-tight text-gray-50 my-2 mx-0 px-0 py-12">Артем
 &
 Екатерина</h1>
 
