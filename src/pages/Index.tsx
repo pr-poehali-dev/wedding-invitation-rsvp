@@ -168,7 +168,7 @@ export default function Index() {
 
         <div className="max-w-5xl mx-auto relative z-10">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-[#D4A843] text-sm font-medium tracking-[0.3em] uppercase">Место торжества</span>
+            <span className="text-[#D4A843] text-sm font-medium tracking-[0.3em] uppercase">Место регистрации</span>
             <h2 className="font-display text-5xl md:text-7xl font-bold text-white mt-3">
               Усадьба <span className="animate-shimmer">"Берёзовая"</span>
             </h2>
