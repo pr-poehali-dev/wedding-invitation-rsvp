@@ -4,29 +4,7 @@ import Icon from "@/components/ui/icon";
 const NAV_LINKS = [
   { id: "hero", label: "Главная" },
   { id: "venue", label: "Место" },
-  { id: "schedule", label: "Программа" },
-  { id: "gallery", label: "Галерея" },
   { id: "rsvp", label: "Подтверждение" },
-];
-
-
-
-const SCHEDULE = [
-  { time: "15:00", title: "Сбор гостей", desc: "Встреча на территории усадьбы, welcome-напитки", icon: "Users" },
-  { time: "16:00", title: "Церемония", desc: "Торжественная регистрация брака в саду", icon: "Heart" },
-  { time: "17:00", title: "Фуршет", desc: "Угощения, живая музыка, фотосессия", icon: "Music" },
-  { time: "18:30", title: "Банкет", desc: "Праздничный ужин в главном зале", icon: "Utensils" },
-  { time: "20:00", title: "Торт и танцы", desc: "Первый танец молодожёнов, дискотека", icon: "Cake" },
-  { time: "23:00", title: "Финал", desc: "Фейерверк и прощальный бокал", icon: "Sparkles" },
-];
-
-const GALLERY_ITEMS = [
-  { bg: "from-rose-900 to-pink-800", label: "Помолвка" },
-  { bg: "from-amber-800 to-yellow-700", label: "Тбилиси 2019" },
-  { bg: "from-purple-900 to-indigo-800", label: "Новый год" },
-  { bg: "from-emerald-800 to-teal-700", label: "Горы" },
-  { bg: "from-red-900 to-rose-800", label: "Первое свидание" },
-  { bg: "from-blue-900 to-cyan-800", label: "Море" },
 ];
 
 function useInView(threshold = 0.15) {
@@ -51,8 +29,6 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
     </div>
   );
 }
-
-
 
 export default function Index() {
   const [activeNav, setActiveNav] = useState("hero");
@@ -135,11 +111,15 @@ export default function Index() {
             <span className="text-[#D4A843] text-sm">✦</span>
           </div>
 
-          <h1 className="font-display text-7xl md:text-9xl font-bold animate-fade-up leading-none tracking-tight text-gray-50 my-2 mx-0 px-0 py-12">Артем
-&
-Екатерина</h1>
+          <h1 className="font-display text-7xl md:text-9xl font-bold text-white animate-fade-up leading-none tracking-tight mb-4">
+            Артём
+            <span className="text-[#D4A843]"> & </span>
+            Екатерина
+          </h1>
 
-          <p className="font-display text-2xl md:text-3xl italic mb-10 animate-fade-up text-[#ffffff]" style={{ animationDelay: "0.2s" }}>12 июня 2026 года</p>
+          <p className="font-display text-2xl md:text-3xl text-white/70 italic mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            12 июня 2026 года
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <button
@@ -148,7 +128,6 @@ export default function Index() {
             >
               Подтвердить участие
             </button>
-
           </div>
         </div>
 
@@ -156,8 +135,6 @@ export default function Index() {
           <Icon name="ChevronDown" size={28} />
         </div>
       </section>
-
-
 
       {/* VENUE */}
       <section id="venue" className="py-28 px-6 bg-gray-950 relative overflow-hidden">
@@ -168,17 +145,17 @@ export default function Index() {
 
         <div className="max-w-5xl mx-auto relative z-10">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-[#D4A843] text-sm font-medium tracking-[0.3em] uppercase">Место регистрации</span>
+            <span className="text-[#D4A843] text-sm font-medium tracking-[0.3em] uppercase">Место торжества</span>
             <h2 className="font-display text-5xl md:text-7xl font-bold text-white mt-3">
-              Усадьба <span className="animate-shimmer">"Берёзовая"</span>
+              <span className="animate-shimmer">Дом Дружбы народов</span>
             </h2>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               { icon: "MapPin", title: "Адрес", value: "г. Ижевск, ул. Орджоникидзе, 33А" },
-              { icon: "Calendar", title: "Дата", value: "19 июля 2025, суббота" },
-              { icon: "Clock", title: "Начало", value: "15:00 — сбор гостей" },
+              { icon: "Calendar", title: "Дата", value: "12 июня 2026, пятница" },
+              { icon: "Clock", title: "Начало", value: "11:20 — сбор гостей" },
             ].map(({ icon, title, value }) => (
               <AnimatedSection key={title}>
                 <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#C2185B]/40 transition-all duration-300">
@@ -191,84 +168,8 @@ export default function Index() {
               </AnimatedSection>
             ))}
           </div>
-
-          <AnimatedSection>
-            <div className="rounded-3xl overflow-hidden h-72 bg-gradient-to-br from-[#2D0A1E] to-[#1A0A0F] border border-white/10 flex items-center justify-center relative">
-              <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                <Icon name="Map" size={200} className="text-white" />
-              </div>
-              <div className="text-center z-10">
-                <div className="text-5xl mb-4">📍</div>
-                <div className="text-white font-semibold mb-2">Усадьба «Берёзовая»</div>
-                <div className="text-white/50 text-sm mb-5">г. Ижевск, ул. Орджоникидзе, 33А</div>
-                <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#C2185B] to-[#D4A843] text-white text-sm font-medium hover:-translate-y-0.5 transition-all duration-300 shadow-lg">
-                  <Icon name="Navigation" size={16} />
-                  Открыть маршрут
-                </button>
-              </div>
-            </div>
-          </AnimatedSection>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4A843]/50 to-transparent" />
-      </section>
-
-      {/* SCHEDULE */}
-      <section id="schedule" className="py-28 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <AnimatedSection className="text-center mb-20">
-            <span className="text-[#C2185B] text-sm font-medium tracking-[0.3em] uppercase">День свадьбы</span>
-            <h2 className="font-display text-5xl md:text-7xl font-bold text-gray-900 mt-3">
-              Программа <span className="text-gradient">вечера</span>
-            </h2>
-          </AnimatedSection>
-
-          <div className="relative">
-            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#C2185B]/20 via-[#D4A843]/60 to-[#C2185B]/20 md:left-1/2 md:-translate-x-0.5" />
-            {SCHEDULE.map((item, i) => (
-              <AnimatedSection key={i} className="relative flex items-start gap-6 mb-12">
-                <div className="absolute left-0 w-12 h-12 rounded-full bg-gradient-to-br from-[#C2185B] to-[#D4A843] flex items-center justify-center shadow-lg z-10 flex-shrink-0 md:left-1/2 md:-translate-x-1/2">
-                  <Icon name={item.icon as "Users"} size={18} className="text-white" />
-                </div>
-                <div className={`flex-1 pl-16 md:pl-0 ${i % 2 === 0 ? "md:pr-[calc(50%+3rem)] md:text-right" : "md:pl-[calc(50%+3rem)]"}`}>
-                  <div className="font-display text-3xl font-bold text-gray-900 mb-1">{item.time}</div>
-                  <div className="font-semibold text-gray-800 mb-1">{item.title}</div>
-                  <div className="text-gray-500 text-sm leading-relaxed">{item.desc}</div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* GALLERY */}
-      <section id="gallery" className="py-28 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <AnimatedSection className="text-center mb-16">
-            <span className="text-[#C2185B] text-sm font-medium tracking-[0.3em] uppercase">Моменты</span>
-            <h2 className="font-display text-5xl md:text-7xl font-bold text-gray-900 mt-3">
-              Наша <span className="text-gradient">галерея</span>
-            </h2>
-            <p className="text-gray-500 mt-4 max-w-lg mx-auto">Здесь скоро появятся свадебные фотографии. А пока — воспоминания о нашем пути</p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {GALLERY_ITEMS.map((item, i) => (
-              <AnimatedSection key={i} className={i === 0 ? "md:col-span-2 md:row-span-2" : ""}>
-                <div className={`rounded-2xl bg-gradient-to-br ${item.bg} flex flex-col items-center justify-center group cursor-pointer hover:scale-[1.02] transition-all duration-500 shadow-lg overflow-hidden ${i === 0 ? "h-64 md:h-96" : "h-44"}`}>
-                  <div className="text-white/20 text-6xl font-display font-bold group-hover:text-white/40 transition-all duration-500">
-                    {String(i + 1).padStart(2, "0")}
-                  </div>
-                  <div className="text-white/60 text-sm font-medium mt-2 group-hover:text-white/90 transition-all duration-300">
-                    {item.label}
-                  </div>
-                  <div className="mt-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <Icon name="ImagePlus" size={20} className="text-white/60" />
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* RSVP */}
@@ -282,7 +183,7 @@ export default function Index() {
               Вы придёте?
             </h2>
             <p className="text-white/60 mt-4 leading-relaxed">
-              Пожалуйста, подтвердите своё участие до <strong className="text-white">1 июля 2025</strong>
+              Пожалуйста, подтвердите своё участие до <strong className="text-white">1 июня 2026</strong>
             </p>
           </AnimatedSection>
 
@@ -291,7 +192,7 @@ export default function Index() {
               <div className="text-center py-16 px-8 rounded-3xl bg-white/10 border border-white/20 backdrop-blur-sm">
                 <div className="text-6xl mb-6">🎉</div>
                 <h3 className="font-display text-3xl font-bold text-white mb-3">Спасибо!</h3>
-                <p className="text-white/70">Мы очень рады, что вы будете с нами. Ждём вас 19 июля!</p>
+                <p className="text-white/70">Мы очень рады, что вы будете с нами. Ждём вас 12 июня!</p>
               </div>
             </AnimatedSection>
           ) : (
@@ -319,14 +220,6 @@ export default function Index() {
                     ))}
                   </select>
                 </div>
-                <div>
-                  <label className="text-white/70 text-sm mb-2 block">Пожелание молодожёнам</label>
-                  <textarea
-                    rows={3}
-                    placeholder="Напишите что-нибудь тёплое..."
-                    className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/30 focus:outline-none focus:border-[#D4A843] transition-all resize-none"
-                  />
-                </div>
                 <button
                   onClick={() => { if (rsvpName.trim()) setRsvpStatus("sent"); }}
                   className="w-full py-4 rounded-xl bg-gradient-to-r from-[#C2185B] to-[#D4A843] text-white font-semibold tracking-wide shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-0.5"
@@ -342,12 +235,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="py-12 px-6 bg-gray-950 text-center">
         <div className="font-display text-4xl font-bold text-gradient mb-3">А & Е</div>
-        <div className="text-gray-500 text-sm mb-6">19 · 07 · 2025</div>
-        <div className="flex justify-center items-center gap-2 text-gray-600 text-xs">
-          <span>Сделано с</span>
-          <span className="text-[#C2185B]">♥</span>
-          <span>для наших близких</span>
-        </div>
+        <div className="text-gray-500 text-sm">12 · 06 · 2026</div>
       </footer>
     </div>
   );
