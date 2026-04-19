@@ -156,7 +156,7 @@ export default function Index() {
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-rose-100">
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-          <span className="font-display text-xl font-semibold text-gradient">А & М</span>
+          <span className="font-display text-xl font-semibold text-gradient">А & Е</span>
           <div className="hidden md:flex gap-1">
             {NAV_LINKS.map(({ id, label }) => (
               <button
@@ -211,9 +211,9 @@ export default function Index() {
           </div>
 
           <h1 className="font-display text-7xl md:text-9xl font-bold text-white mb-4 animate-fade-up leading-none tracking-tight">
-            Алекс
+            Артём
             <span className="text-[#D4A843]"> & </span>
-            Маша
+            Катя
           </h1>
 
           <p className="font-display text-2xl md:text-3xl text-white/70 italic mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
@@ -261,7 +261,7 @@ export default function Index() {
                 <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-[#C2185B]/20 to-[#D4A843]/20 blur-xl" />
                 <img
                   src={COUPLE_IMAGE}
-                  alt="Алекс и Маша"
+                  alt="Артём и Екатерина"
                   className="relative rounded-3xl w-full object-cover aspect-[4/5] shadow-2xl"
                 />
                 <div className="absolute -bottom-6 -right-6 w-28 h-28 rounded-2xl bg-gradient-to-br from-[#C2185B] to-[#D4A843] flex items-center justify-center shadow-xl">
@@ -279,7 +279,7 @@ export default function Index() {
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C2185B] to-[#D4A843] flex items-center justify-center text-white font-display font-bold">А</div>
                     <div>
-                      <div className="font-semibold text-gray-900">Александр</div>
+                      <div className="font-semibold text-gray-900">Артём</div>
                       <div className="text-sm text-gray-500">Жених</div>
                     </div>
                   </div>
@@ -289,9 +289,9 @@ export default function Index() {
                 </div>
                 <div className="p-6 rounded-2xl bg-amber-50 border border-amber-100">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#D4A843] to-[#C2185B] flex items-center justify-center text-white font-display font-bold">М</div>
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#D4A843] to-[#C2185B] flex items-center justify-center text-white font-display font-bold">Е</div>
                     <div>
-                      <div className="font-semibold text-gray-900">Мария</div>
+                      <div className="font-semibold text-gray-900">Екатерина</div>
                       <div className="text-sm text-gray-500">Невеста</div>
                     </div>
                   </div>
@@ -507,7 +507,7 @@ export default function Index() {
 
       {/* FOOTER */}
       <footer className="py-12 px-6 bg-gray-950 text-center">
-        <div className="font-display text-4xl font-bold text-gradient mb-3">А & М</div>
+        <div className="font-display text-4xl font-bold text-gradient mb-3">А & Е</div>
         <div className="text-gray-500 text-sm mb-6">19 · 07 · 2025</div>
         <div className="flex justify-center items-center gap-2 text-gray-600 text-xs">
           <span>Сделано с</span>
