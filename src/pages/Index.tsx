@@ -186,7 +186,7 @@ export default function Index() {
               Вы придёте?
             </h2>
             <p className="text-white/60 mt-4 leading-relaxed">
-              Пожалуйста, подтвердите своё участие до <strong className="text-white">1 июня 2026</strong>
+              Пожалуйста, подтвердите своё участие до <strong className="text-white">26 апреля 2026</strong>
             </p>
           </AnimatedSection>
 
