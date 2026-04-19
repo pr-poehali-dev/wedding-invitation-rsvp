@@ -176,7 +176,7 @@ export default function Index() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
-              { icon: "MapPin", title: "Адрес", value: "Подмосковье, Рублёво-Успенское ш., 42 км" },
+              { icon: "MapPin", title: "Адрес", value: "г. Ижевск, ул. Орджоникидзе, 33А" },
               { icon: "Calendar", title: "Дата", value: "19 июля 2025, суббота" },
               { icon: "Clock", title: "Начало", value: "15:00 — сбор гостей" },
             ].map(({ icon, title, value }) => (
@@ -200,7 +200,7 @@ export default function Index() {
               <div className="text-center z-10">
                 <div className="text-5xl mb-4">📍</div>
                 <div className="text-white font-semibold mb-2">Усадьба «Берёзовая»</div>
-                <div className="text-white/50 text-sm mb-5">Рублёво-Успенское ш., 42 км от МКАД</div>
+                <div className="text-white/50 text-sm mb-5">г. Ижевск, ул. Орджоникидзе, 33А</div>
                 <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#C2185B] to-[#D4A843] text-white text-sm font-medium hover:-translate-y-0.5 transition-all duration-300 shadow-lg">
                   <Icon name="Navigation" size={16} />
                   Открыть маршрут
