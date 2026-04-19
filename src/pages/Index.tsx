@@ -210,11 +210,9 @@ export default function Index() {
             <span className="text-[#D4A843] text-sm">✦</span>
           </div>
 
-          <h1 className="font-display text-7xl md:text-9xl font-bold text-white mb-4 animate-fade-up leading-none tracking-tight">
-            Артём
-            <span className="text-[#D4A843]"> & </span>
-            Катя
-          </h1>
+          <h1 className="font-display text-7xl md:text-9xl font-bold mb-4 animate-fade-up leading-none tracking-tight mx-0 text-gray-50">Артем
+&
+Екатерина</h1>
 
           <p className="font-display text-2xl md:text-3xl text-white/70 italic mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
             19 июля 2025 года
